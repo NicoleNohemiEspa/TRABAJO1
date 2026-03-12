@@ -19,14 +19,14 @@ export const useUserStore = defineStore('user', () => {
     })
 
     function $registro(){
-        return axiosRiksiri.post('register', registro.value).then( res => {
+        return axiosRiksiri.post('register', registro.value).then( (res: any) => {
             $setLogin(res.data);
             return res.data;
         })
     }
     
     function $login(){
-        return axiosRiksiri.post('login', login.value).then( res => {
+        return axiosRiksiri.post('login', login.value).then( (res: any) => {
             $setLogin(res.data);
             return res.data;
         });

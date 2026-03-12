@@ -44,9 +44,9 @@ const userStore = useUserStore();
 const router = useRouter();
 
 function login() {
-    userStore.$login().then(response => {
+    userStore.$login().then((response: any) => {
         router.push({ name: 'Seccion' });
-    }).catch(error => {
+    }).catch((error: any) => {
         alertController.create({
             header: 'Error',
             message: error.response.data.message,
